@@ -202,6 +202,31 @@ print(myDress['size'])
 #         print('Updated')
 # print(birthdays)
 
-# 4.1 keys() values() items()       dict_keys, dict_values, dict_items
+#4.1 METHODS: keys() values() items() get(), setdefault()
 
 print(myDress.keys())
+print(myDress.values())
+print(myDress.items())
+print('Dress size is ' + myDress.get('size', 'unavail'))
+print('Dress is from ' + myDress.get('shop', 'unknown') + ' shop')
+print(myDress.setdefault('shop', 'H&M'))
+print(myDress)
+
+
+#Note: Dictionaries have no order, for true list RETURN as a list() function
+# for k in myDress.keys():
+#     print(k)
+# print(myDress.keys())
+# print(list(myDress.keys()))
+
+#4.2 in , not in -> returns a boolean value for dictionaries
+
+# print('m' in myDress.keys())        #check value?
+
+#4.3 Module pprint ->  pprint() pformat() for pretty printing
+import pprint
+
+# Both are equal below
+# pprint.pprint(someDictionaryValue)
+# print(pprint.pformat(someDictionaryValue))
+
