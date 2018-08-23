@@ -25,6 +25,10 @@ print (spam)
 concat = spam + spam2
 print (concat)
 
+print('check')
+con= spam3 + spam
+print(con)
+
 replicate = spam * 3
 print (replicate)
 
@@ -32,63 +36,61 @@ lslice = ['cat', 'bat', 'rat', 'elephant']
 print(lslice[0:-1]) #[0 included in output:-1 excluded in output] #[defualt starts at 0: end is list length]
 print(len(lslice))
 
-print ('\n2. Input all cat names in a list')
+# print ('\n2. Input all cat names in a list')
+#
+# cats = []
+#
+# while True:
+#     print ('Current cats are ' + ':'.join(cats))
+#     print("Please enter your cat's name or enter 'done' to quit, Cat")
+#     answer = input()
+#     print (answer)
+#     if answer == "done":
+#         break
+#
+#     cats = cats + [answer]
+#
+# print("The cat names are: ")
+# for name in cats:
+#         print(' '+ name)
 
-cats = []
 
-while True:
-    print ('Current cats are ' + ':'.join(cats))
-    print("Please enter your cat's name or enter 'done' to quit, Cat")
-    answer = raw_input()
-    print (answer)
-    if answer == "done":
-        break
-
-    cats = cats + [answer]
-
-print("The cat names are: ")
-for name in cats:
-        print(' '+ name)
-
-
-#1.7For Loops for List              //Why not a number too
-
+print ('\n2. Looping through list, checking elements in list')
 alphab = ['m','o','g','p','r' ]
 for i in range(len(alphab)):
      print('Index '+ str(i) + ' is: ' + alphab[i])
 
-# anotherList = [1,2, 3, 4, 5]
-# for i in range(len(anotherList)):
-#      print('Index '+ int(i) + ' is: ' + anotherList[i])
-#print(int('7'))
+anotherList = [1,2, 3, 4, 5]
+for i in range(len(anotherList)):
+     print('Index '+ str(i) + ' is: ' + str(anotherList[i]))
 
 
-#1.8 in and not in   -> Boolean
 
-# print('m' in alphab) #True
-# print('34' in alphab) #False
+print('m' not in alphab) #False
+print('34' in alphab) #False
 
-################# PET PROGRAM ###############
-
-# myPets = ['cat', 'dog', 'pig']
-# print('Name your pet or enter exit to leave: ')
-# answer = input()
+# print ('\n3. Find pet in a list of pets')
 #
-# if answer in myPets:
-#     print(answer + " is your pet!")
-# else:
-#     print(answer + " is not your pet")
-
-#How to loop this if needed
-#Ask Nikki how to store pets for each right and wrong answers
-
+# myPets = ['cat', 'dog', 'pig']
+# myWrongPets =[]
+#
+# while(True):
+#     print('Name your pet or enter \'exit()\' to leave: ')
+#     answer = input()
+#     if answer in myPets:
+#         print(answer + " is your pet!")
+#     else:
+#         print(answer + " is not your pet")
+#         myWrongPets= myWrongPets + [answer]
+#         myWrongPets.append
+#         break
 
 #1.8 Multiple Assignmennt
-#
-# dog =['small', 'brown', 'furry']
-# size, color, typed = dog
-# print(size,color)
-#
+
+dog =['small', 'brown', 'furry']
+size, color, typed = dog
+print(size,color)
+#Shift?
 # a , b = 1, 2
 # a , b = b, a
 # print(a, b)
@@ -98,42 +100,44 @@ for i in range(len(alphab)):
 # spam+= 1
 # print(spam) #can be done with strings too
 #
-# #2.0 Methods with Lists (index(), append(), insert(), remove(), sort(), sort()
-#
-# print(dog.index('small'))   #FINDS the index value of the item in list
-# dog.append('red')           #ADDS a value to the END of list
-# print(dog)
-# dog.insert(1,'noisy')       #ADDS a value to the INDEX number (index, value)
-# print(dog)
-# dog.remove('noisy')         #REMOVES the value from list
-# print(dog)
-# #NOTE: Use remove when you know the value and del statement when you know the index
-# dog.sort()
-# print(dog)
+print('\nMethods with Lists')
+#2.0 Methods with Lists (index(), append(), insert(), remove(), sort(), sort()
+print(dog.index('small'))   #FINDS the index value of the item in list
+dog.append('red')           #ADDS a value to the END of list
+print(dog)
+dog.insert(1,'noisy')       #ADDS a value to the INDEX number (index, value)
+print(dog)
+dog.remove('noisy')         #REMOVES the value from list
+print(dog)
+ #NOTE: Use remove when you know the value and del statement when you know the index
+del dog[3]
+print(dog)
+dog.sort()
+print(dog)
 #Note:
 #1. On either alpha or numerical list not both
-#2. To rever use .sort(reverse=true)
+#2. To reverse use .sort(reverse=true)
 #3. ASCII method used and hence Capital letters valued at first and then small
 #4. If normal sort is required use .sort(key=str.lower)
 
 ############################### Magic 8 Ball ##############################
 
+print('\nCreate magic 8 ball')
 
-
-
-#3.0 List like types: Strings and Tuples
+print('\n3.0 List like types:Strings and Tuples')
 #3.1 Strings act a lot like lists
 #it can do slice(), index(), for loop, len(), in, not in
-#
-# name = 'Nitya'
-# print('Ni' in name)
-# print(name[1])
-#
-# for i in name:
-#     print('*********' + i + '**********')
+
+name = 'Nitya'
+print('Ni' in name)
+print(name[1])
+
+for i in name:
+    print('*********' + i + '**********')
 #Note: Strings are immutable, means it can't change except making a new string by slicing and concaranation
 #Lists are mutable, can assign new value but only overwrites if you want to change use del() and append()
 
+print('\n4.0 Tuples')
 #3.2 Tuple () -> like lists but immutable
 #
 # print(type(('nitya',)))
@@ -152,20 +156,20 @@ for i in range(len(alphab)):
 
 
 #############################Character Picture Grid#############################
-# grid = [['.', '.', '.', '.', '.', '.'],
-#         ['.', 'O', 'O', '.', '.', '.'],
-#         ['O', 'O', 'O', 'O', '.', '.'],
-#         ['O', 'O', 'O', 'O', 'O', '.'],
-#         ['.', 'O', 'O', 'O', 'O', 'O'],
-#         ['O', 'O', 'O', 'O', 'O', '.'],
-#         ['O', 'O', 'O', 'O', '.', '.'],
-#         ['.', 'O', 'O', '.', '.', '.'],
-#         ['.', '.', '.', '.', '.', '.']]
-# print(grid[2][1])
-#
-# for j in range(len(grid[0])):
-#     for i in range(len(grid)):
-#         print(grid[i][j],end='' )
-#     print()
+grid = [['.', '.', '.', '.', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['.', 'O', 'O', 'O', 'O', 'O'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['.', '.', '.', '.', '.', '.']]
+print(grid[2][1])
+
+for j in range(len(grid[0])):
+    for i in range(len(grid)):
+        print(grid[i][j],end='' )
+    print()
 
 

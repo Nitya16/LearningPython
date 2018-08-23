@@ -28,3 +28,5 @@ while True:
         exit()
     else:
         print('Retry')
+
+print('Hi')     #Difference between break vs exit()

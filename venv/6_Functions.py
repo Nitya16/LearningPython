@@ -36,10 +36,9 @@ def sum():
 sum()
 
 print('\n3. Custom methods - Function that adds up the sum of all even numbers')
-# hello(str(5)) cannot forward declare functions
 
 # functionName = sayHello
-# return type = string
+# return type = none
 # arguments/parameters = string
 def sayHello(name):                # function definition
     print('Hello ' + name)      # name variable exists locally only

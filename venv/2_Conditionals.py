@@ -78,8 +78,6 @@ while True:
 
 # Example 6: for:
 # For loops basically generate a list [] -> [start, stop -1]
-# first check if start is < stop, if yes, add to the list.
-# then do start + step. then check start + stop < stop. If yes, add to the list.
 # eg. range (10) -> [0,1,2,3,4,5,6,7,8,9]
 # eg. range (10,11) -> [10]
 # eg. range (10,10) -> []

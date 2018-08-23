@@ -15,6 +15,7 @@ def spam():
 def bacon():
     ham = 101
     eggs = 0
+    print(eggs)
 
 spam()
 ''' Every method has its own local scope. So here

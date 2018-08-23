@@ -27,6 +27,7 @@ def connectToDatabase():
 myVariable = None
 
 myVariable = connectToDatabase()
+#If myVariable = 5 proceed to else
 if (None == myVariable):
     print ('Nothing changed myVariable. This means we couldn\'t connect to the database')
 else:
@@ -50,6 +51,8 @@ print(int(7.7))
 print ('\n3. Learning data types and operators.')
 # Example 2.4:
 print(42 == '42') #False
+print(42 == int('42'))
+#print(42 == int('42.00'))  Illegal
 print(42 == 42.00) #True
 print(True == True) #True
 print('hello' == 'Hello') #False bec it is case-sensitive
