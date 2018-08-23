@@ -3,74 +3,59 @@
 1. Lists and Tuples
 --------------------------------------------------------
 """
-# #1. List and Tuple Data Type
-#
-# #1.1 List Basics
-#
-# # spam =[ 1, 2, 3]
-# # spam2 =['cat', 'bat', 'rat', 'mat', ]
-# # spam3 = [['cat', 'bat'], [10, 20, 30, 40, 50]]
-# # print(spam)
-# # print(spam2[1])      #1 is the index
-# # print(spam3[1][0])  #[1]which list to use[0]which value to use
-# # print (spam3[-1])   #Negative index gives you the last item in list
-#
-# #1.2 Slice List
-#
-# lslice = ['cat', 'bat', 'rat', 'elephant']
-# #
-# # #[defualt start at 0: end is list length]
-# # print(lslice[0:-1]) #[0 included in output:-1 excluded in output]
-# #
-# # #1.3List Length
-# # print(len(lslice))
-#
-# #1.4 Changing values in lists
-#
-# chnge= [1, 2, 3, 4, 5]
-#
-# chnge[2]= 7
-# print(chnge)
-# chnge[4]=chnge[2]
-# print(chnge)
-# chnge[-1]= 34567
-# print(chnge)
-#
-# #1.5 LIST CONCATINATION AND REPLICATION
-#
-# concat= chnge + lslice
-# print(concat)
-#
-# replic= lslice *3
-# print(replic)
-#
-# #1.6 DEL STATEMENT        //when you know the index from the list
-# del chnge[1]
-# print(chnge)
-#
-#
-# ##################################CAT NAME PROGRAM########################
-# cats=[]
-#
-# while True:
-#     print("Please enter your cat's name or enter 'exit' to quit, Cat" + str(len(cats) + 1 ))
-#     answer = input()
-#
-#     if answer == 'exit':
-#         break
-#
-#     cats = cats + [answer]
-#
-# print("The cat names are: ")
-# for name in cats:
-#     print(' '+ name)
+
+print ('1. Ways to make and modify lists')
+spam =[ 1, 2, 3]
+spam2 =['cat', 'bat', 'rat', 'mat', ]
+spam3 = [['cat', 'bat'], [10, 20, 30, 40, 50]]
+print(spam)
+print(spam2[1])      #1 is the index
+print(spam3[1][0])  #[1]which list to use[0]which value to use
+print (spam3[-1])   #Negative index gives you the last item in list
+
+spam[1] = 6
+print(spam)
+
+spam[-1] = 10
+print (spam)
+
+del spam[-1]
+print (spam)
+
+concat = spam + spam2
+print (concat)
+
+replicate = spam * 3
+print (replicate)
+
+lslice = ['cat', 'bat', 'rat', 'elephant']
+print(lslice[0:-1]) #[0 included in output:-1 excluded in output] #[defualt starts at 0: end is list length]
+print(len(lslice))
+
+print ('\n2. Input all cat names in a list')
+
+cats = []
+
+while True:
+    print ('Current cats are ' + ':'.join(cats))
+    print("Please enter your cat's name or enter 'done' to quit, Cat")
+    answer = raw_input()
+    print (answer)
+    if answer == "done":
+        break
+
+    cats = cats + [answer]
+
+print("The cat names are: ")
+for name in cats:
+        print(' '+ name)
 
 
 #1.7For Loops for List              //Why not a number too
 
-# alphab = ['m','o','g','p','r' ]
-# for i in range(len(alphab)):
-#      print('Index '+ str(i) + ' is: ' + alphab[i])
+alphab = ['m','o','g','p','r' ]
+for i in range(len(alphab)):
+     print('Index '+ str(i) + ' is: ' + alphab[i])
 
 # anotherList = [1,2, 3, 4, 5]
 # for i in range(len(anotherList)):
