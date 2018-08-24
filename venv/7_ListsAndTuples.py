@@ -139,6 +139,51 @@ print('Note:Strings act a lot like lists, it can do slice(), index(), for loop, 
 name = 'Nitya'
 print('Ni' in name)
 print(name[1])
+print(name[-1])
+newName= name[:3]
+print(newName)
+caps= name.upper()
+print(caps)
+small= name.lower()
+print(small)
+print('Hello'.upper().lower().upper())
+print(caps.islower())
+print(caps.isupper())
+
+# while True:
+#     print('Enter your age:')
+#     age = input()
+#     if age.isdecimal():
+#         break
+#     print('Please enter a number for your age.')
+#
+# while True:
+#     print('Select a new password (letters and numbers only):')
+#     password = input()
+#     if password.isalnum():
+#         break
+#     print('Passwords can only have letters and numbers.')
+
+# .startswith() .endswith()
+
+print(' '.join(['My', 'name', 'is', 'Simon']))
+print('My name is Simon'.split())
+print('My name is Simon'.split('m'))
+
+#.rjust(20,*) .ljust() .center()
+print('Hello'.center(20,'-'))
+
+def printPicnic(itemsDict, leftWidth, rightWidth):
+    print('PICNIC ITEMS'.center(leftWidth + rightWidth, '-'))
+    for k, v in itemsDict.items():
+        print(k.ljust(leftWidth, '.') + str(v).rjust(rightWidth))
+picnicItems = {'sandwiches': 4, 'apples': 12, 'cups': 4, 'cookies': 8000}
+printPicnic(picnicItems, 12, 5)
+printPicnic(picnicItems, 20, 6)
+
+#strip(), rstrip(), lstrip()
+
+# import pyperclip
 
 for i in name:
     print('*********' + i + '**********')
@@ -170,9 +215,9 @@ print('\n13.Copying list or dictionary: Helps resolve refrence id issue')
 print('copy.copy() -> used to copy list or dictionary')
 print('copy.deepcopy() -> used to copy lists containing inner list')
 
-import copy
+from copy import *
 c1= [1,2,3,4,5]
-c2= copy.copy(r1)
+c2= copy(r1)
 c2[2] ='changed'
 print(c1)
 print(c2)
@@ -194,5 +239,19 @@ for j in range(len(grid[0])):
     for i in range(len(grid)):
         print(grid[i][j],end='' )
     print()
+
+print('\n15.Passing Reference')
+def eggs(someParameter):
+    someParameter.append('Hello')
+
+print('Pass by refrence')
+spam = [1, 2, 3]
+eggs(spam)
+print(spam)
+
+print('Pass by value')
+l2 = [4,5,6]
+eggs(copy(l2))
+print(l2)
 
 

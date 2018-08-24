@@ -62,3 +62,14 @@ print(True or False)    #either of the conditions have to met
 print (not True)        #'double negative'
 print((4<5) and (5<6)) #True
 print ((1 == 1) or (2 == 3)) #True
+
+print ('\n2. Learning String Formatting')
+print("Hello there!\nHow are you?\nI\'m doing fine.")
+print(r'That is Carol\'s cat.') #This is a raw string
+print('''Dear Alice,
+
+Eve's cat has been arrested for catnapping, cat burglary, and extortion.
+
+Sincerely,
+Bob''')
+print('Dear Alice,\n\nEve\'s cat has been arrested for catnapping, cat burglary, and extortion.\n\nSincerely,\nBob')
