@@ -28,11 +28,16 @@ print(isPhoneNumber(input2))
 
 print ('\n2. Finding a phone number in a text using patern matching')
 
+finalAns=''
 message= 'Call me at 404-820-3158. And later call in 803-424-5328!'
 for i in range(len(message)):
-    chunk = message[i:i+12] #Explain slicing
+    chunk = message[i:i+12]
     if isPhoneNumber(chunk):
-        print('Phone number found: ' + chunk)
+        finalAns= finalAns + '\n' + chunk
+
+        # print('Phone number found: ' + chunk)
+        print(finalAns)
+
 print('Done')
 
 print('\n3. Regex: Methods-> re.compile(), search(), group(), findall()')
