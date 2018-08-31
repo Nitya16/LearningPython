@@ -2,6 +2,7 @@
 
 # CLI tool for retreiving passwords to accounts
 import sys, pyperclip, getpass
+#getpass lets user enter a password with no echo(can't count the strings in pass while entering it)
 
 
 PASSWORDS = {'email1': 'F7minlBDDuvMJuxESSKHFhTxFtjVB6',
@@ -11,10 +12,10 @@ print("Hello Nitya")
 mainpass= getpass.getpass('Enter the Password:')
 print(sys.argv)
 
-if mainpass != 'nityagovind':
+if mainpass != 'nityaisawesome':
     print('Wrong Password')
 
-while(mainpass== 'nityagovind'):
+while(mainpass== 'nityaisawesome'):
 
     if len(sys.argv) != 2 :
         print('Usage: python mypasswords.py [yourAccountName]')
